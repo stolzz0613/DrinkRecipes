@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CategoriasContext } from "../context/CategoriasContext";
 
 const Formulario = () => {
+
+    const { hola } = useContext(CategoriasContext);
+    alert(hola);
     return (
         <form
             className="col-12"
@@ -30,7 +34,7 @@ const Formulario = () => {
                 <div className="col-md-4">
                     <input
                         type="submit"
-                        className="btn btn-block btn-danger"
+                        className="shadow btn btn-block btn-danger rounded"
                         value="Buscar Bebidas"
                     />
                 </div>
