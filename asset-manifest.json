@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/DrinkRecipes/static/css/main.61c545f5.chunk.css",
+    "main.js": "/DrinkRecipes/static/js/main.03275059.chunk.js",
+    "main.js.map": "/DrinkRecipes/static/js/main.03275059.chunk.js.map",
+    "runtime-main.js": "/DrinkRecipes/static/js/runtime-main.ef968183.js",
+    "runtime-main.js.map": "/DrinkRecipes/static/js/runtime-main.ef968183.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/DrinkRecipes/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.19e2f016.chunk.js": "/DrinkRecipes/static/js/2.19e2f016.chunk.js",
+    "static/js/2.19e2f016.chunk.js.map": "/DrinkRecipes/static/js/2.19e2f016.chunk.js.map",
+    "index.html": "/DrinkRecipes/index.html",
+    "precache-manifest.72ca3ade084935e1e014f7afd1b933a0.js": "/DrinkRecipes/precache-manifest.72ca3ade084935e1e014f7afd1b933a0.js",
+    "service-worker.js": "/DrinkRecipes/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/DrinkRecipes/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.61c545f5.chunk.css.map": "/DrinkRecipes/static/css/main.61c545f5.chunk.css.map",
+    "static/js/2.19e2f016.chunk.js.LICENSE.txt": "/DrinkRecipes/static/js/2.19e2f016.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef968183.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.19e2f016.chunk.js",
+    "static/css/main.61c545f5.chunk.css",
+    "static/js/main.03275059.chunk.js"
+  ]
+}
