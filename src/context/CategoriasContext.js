@@ -4,7 +4,7 @@ export const CategoriasContext = createContext();
 
 const CategoriasProvider = (props) => {
 
-    const [hola, sethola] = useState("Hola desde el state");
+    const [hola, sethola] = useState("desde el state");
 
     return (
         <CategoriasContext.Provider
