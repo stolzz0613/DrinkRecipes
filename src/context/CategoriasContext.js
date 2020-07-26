@@ -1,15 +1,26 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
+import Axios from 'axios';
 
 export const CategoriasContext = createContext();
 
 const CategoriasProvider = (props) => {
 
-    const [hola, sethola] = useState("desde el state");
+    const [categorias, setCategorias] = useState([]);
+
+    useEffect(() => {
+        const obtenerCategorias = async () => {
+            const url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list";
+
+            const categorias = await Axios.get(url);
+            setCategorias(categorias.data.drinks)
+        }
+        obtenerCategorias();
+    }, [])
 
     return (
         <CategoriasContext.Provider
             value={{
-                hola
+                categorias
             }}
         >
             {props.children}
