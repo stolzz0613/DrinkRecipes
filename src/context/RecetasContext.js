@@ -17,16 +17,33 @@ const RecetasProvider = (props) => {
     useEffect(() => {
         if (consultar) {
             const obtenerRecetas = async () => {
-                const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${nombre}&c=${categoria}`
+                let url = ``;
+                if (nombre !== "" && categoria === "") {
+                    url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${nombre}`;
+                } else if (categoria !== "" && nombre === "") {
+                    url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${categoria}`;
+                } else if (categoria === "" && nombre === "") {
+                    url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+                } else {
+                    url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${categoria}&i=${nombre}`;
+                }
 
                 const resultado =
                     await axios
                         .get(url)
                         .then(response => {
-                            setRecetas(response.data.drinks)
+                            if (response.data === "") {
+                                setRecetas([{
+                                    "strDrink": "No se encontraron resultados",
+                                    "strDrinkThumb": "https://www.123dreamit.com/static/new_dream/img/no-resultados_sm.png",
+                                    "idDrink": "0000"
+                                }])
+                            } else {
+                                setRecetas(response.data.drinks);
+                            }
                         })
                         .catch(err => {
-                            setRecetas("No se han encontrados resultados, intente de nuevo")
+                            console.log(err);
                         })
             }
             obtenerRecetas();
@@ -36,7 +53,7 @@ const RecetasProvider = (props) => {
     return (
         <RecetasContext.Provider
             value={{
-                recetas, 
+                recetas,
                 setBusquedaRecetas,
                 setConsultar
             }}
