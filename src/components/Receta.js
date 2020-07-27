@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ModalContext } from "../context/ModalContext";
 
 const Receta = ({ receta }) => {
+
+    const { setIdReceta } = useContext(ModalContext);
+
     return (
         <div className="col-md-4 mb-3">
-            <div className="card">
+            <div className="card  justify-content-center h-100">
                 <h2 className="card-header">
                     {receta.strDrink}
                 </h2>
@@ -16,6 +20,9 @@ const Receta = ({ receta }) => {
                     <button
                         type="button"
                         className="btn btn-block btn-primary"
+                        onClick={() => {
+                            setIdReceta(receta.idDrink)
+                        }}
                     >
                         Ver Receta
                     </button>
