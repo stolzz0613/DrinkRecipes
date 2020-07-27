@@ -9,24 +9,33 @@ import { ModalContext } from "../context/ModalContext";
 function getModalStyle() {
     const top = 50;
     const left = 50;
-
     return {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
-        overflow: 'scroll',
     };
 }
 
 const useStyles = makeStyles(theme => ({
     paper: {
         position: 'absolute',
-        width: 400,
+        width: 300,
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
         overflow: 'scroll',
+        height: '100%',
+        maxHeight: 500,
+        display: 'block'
     },
+    header: {
+        padding: '12px 0',
+        borderBottom: '1px solid darkgrey'
+    },
+    content: {
+        padding: "12px 0",
+        overflow: 'scroll'
+    }
 }));
 
 
@@ -95,25 +104,29 @@ const Receta = ({ receta }) => {
 
                     >
                         <div style={modalStyle} className={classes.paper}>
-                            <h2>{informacion.strDrink}</h2>
-                            <h3 className="mt-4">Instrucciones</h3>
-                            <p>
-                                {informacion.strInstructions}
-                            </p>
-                            <img
-                                className="img-fluid my-4"
-                                src={informacion.strDrinkThumb}
-                                alt={`imagen de ${informacion.strDrink}`}
-                            />
-                            <h3>Ingredientes y Cantidades</h3>
-                            <ul>
-                                {mostrarIngredientes(informacion)}
-                            </ul>
+                            <div className={classes.header}>
+                                <h2>{informacion.strDrink}</h2>
+                            </div>
+                            <div className={classes.content}>
+                                <h3 className="mt-4">Instrucciones</h3>
+                                <p>
+                                    {informacion.strInstructions}
+                                </p>
+                                <img
+                                    className="img-fluid my-4"
+                                    src={informacion.strDrinkThumb}
+                                    alt={`imagen de ${informacion.strDrink}`}
+                                />
+                                <h3>Ingredientes y Cantidades</h3>
+                                <ul>
+                                    {mostrarIngredientes(informacion)}
+                                </ul>
+                            </div>
                         </div>
                     </Modal>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
