@@ -36,7 +36,7 @@ const RecetasProvider = (props) => {
                                 setRecetas([{
                                     "strDrink": "No se encontraron resultados",
                                     "strDrinkThumb": "https://www.123dreamit.com/static/new_dream/img/no-resultados_sm.png",
-                                    "idDrink": "0000"
+                                    "idDrink": "0"
                                 }])
                             } else {
                                 setRecetas(response.data.drinks);

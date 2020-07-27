@@ -43,7 +43,8 @@ const Receta = ({ receta }) => {
         setOpen(false);
     };
 
-    const { setIdReceta } = useContext(ModalContext);
+    const { informacion, setIdReceta, setInformacion } = useContext(ModalContext);
+    console.log(informacion.strDrinkThumb);
 
     return (
         <div className="col-md-4 mb-3">
@@ -61,6 +62,7 @@ const Receta = ({ receta }) => {
                         type="button"
                         className="btn btn-block btn-primary"
                         onClick={() => {
+                            if (receta.idDrink === "0") return;
                             setIdReceta(receta.idDrink)
                             handleOpen();
                         }}
@@ -69,9 +71,23 @@ const Receta = ({ receta }) => {
                     </button>
                     <Modal
                         open={open}
+                        onClose={() => {
+                            setInformacion({});
+                            setIdReceta(null);
+                            handleClose();
+                        }}
                     >
                         <div style={modalStyle} className={classes.paper}>
-                            <h1>Desde Modal</h1>
+                            <h2>{informacion.strDrink}</h2>
+                            <h3 className="mt-4">Instrucciones</h3>
+                            <p>
+                                {informacion.strInstructions}
+                            </p>
+                            <img
+                                className="img-fluid my-4"
+                                src={informacion.strDrinkThumb}
+                                alt={`imagen de ${informacion.strDrink}`}
+                            />
                         </div>
                     </Modal>
                 </div>
