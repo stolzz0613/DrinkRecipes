@@ -14,6 +14,7 @@ function getModalStyle() {
         top: `${top}%`,
         left: `${left}%`,
         transform: `translate(-${top}%, -${left}%)`,
+        overflow: 'scroll',
     };
 }
 
@@ -24,6 +25,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.background.paper,
         boxShadow: theme.shadows[5],
         padding: theme.spacing(2, 4, 3),
+        overflow: 'scroll',
     },
 }));
 
@@ -44,7 +46,21 @@ const Receta = ({ receta }) => {
     };
 
     const { informacion, setIdReceta, setInformacion } = useContext(ModalContext);
-    console.log(informacion.strDrinkThumb);
+
+    const mostrarIngredientes = informacion => {
+        let ingredientes = [];
+        for (let i = 1; i < 16; i++) {
+            if (informacion[`strIngredient${i}`]) {
+                ingredientes.push(
+                    <li>
+                        {informacion[`strIngredient${i}`] + "\t"}
+                        {informacion[`strMeasure${i}`]}
+                    </li>
+                )
+            }
+        }
+        return ingredientes;
+    }
 
     return (
         <div className="col-md-4 mb-3">
@@ -76,6 +92,7 @@ const Receta = ({ receta }) => {
                             setIdReceta(null);
                             handleClose();
                         }}
+
                     >
                         <div style={modalStyle} className={classes.paper}>
                             <h2>{informacion.strDrink}</h2>
@@ -88,6 +105,10 @@ const Receta = ({ receta }) => {
                                 src={informacion.strDrinkThumb}
                                 alt={`imagen de ${informacion.strDrink}`}
                             />
+                            <h3>Ingredientes y Cantidades</h3>
+                            <ul>
+                                {mostrarIngredientes(informacion)}
+                            </ul>
                         </div>
                     </Modal>
                 </div>
