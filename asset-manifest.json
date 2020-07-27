@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/DrinkRecipes/static/css/main.ac235a7f.chunk.css",
-    "main.js": "/DrinkRecipes/static/js/main.7363747f.chunk.js",
-    "main.js.map": "/DrinkRecipes/static/js/main.7363747f.chunk.js.map",
+    "main.css": "/DrinkRecipes/static/css/main.5335d63c.chunk.css",
+    "main.js": "/DrinkRecipes/static/js/main.0183d030.chunk.js",
+    "main.js.map": "/DrinkRecipes/static/js/main.0183d030.chunk.js.map",
     "runtime-main.js": "/DrinkRecipes/static/js/runtime-main.ef968183.js",
     "runtime-main.js.map": "/DrinkRecipes/static/js/runtime-main.ef968183.js.map",
     "static/css/2.af3c1da9.chunk.css": "/DrinkRecipes/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.19e2f016.chunk.js": "/DrinkRecipes/static/js/2.19e2f016.chunk.js",
-    "static/js/2.19e2f016.chunk.js.map": "/DrinkRecipes/static/js/2.19e2f016.chunk.js.map",
+    "static/js/2.35ddcf5d.chunk.js": "/DrinkRecipes/static/js/2.35ddcf5d.chunk.js",
+    "static/js/2.35ddcf5d.chunk.js.map": "/DrinkRecipes/static/js/2.35ddcf5d.chunk.js.map",
     "index.html": "/DrinkRecipes/index.html",
-    "precache-manifest.2c028c3e9d2d9036b44e9ea24946787f.js": "/DrinkRecipes/precache-manifest.2c028c3e9d2d9036b44e9ea24946787f.js",
+    "precache-manifest.1550819ec4bae528073972dbd06e3c75.js": "/DrinkRecipes/precache-manifest.1550819ec4bae528073972dbd06e3c75.js",
     "service-worker.js": "/DrinkRecipes/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/DrinkRecipes/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.ac235a7f.chunk.css.map": "/DrinkRecipes/static/css/main.ac235a7f.chunk.css.map",
-    "static/js/2.19e2f016.chunk.js.LICENSE.txt": "/DrinkRecipes/static/js/2.19e2f016.chunk.js.LICENSE.txt"
+    "static/css/main.5335d63c.chunk.css.map": "/DrinkRecipes/static/css/main.5335d63c.chunk.css.map",
+    "static/js/2.35ddcf5d.chunk.js.LICENSE.txt": "/DrinkRecipes/static/js/2.35ddcf5d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ef968183.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.19e2f016.chunk.js",
-    "static/css/main.ac235a7f.chunk.css",
-    "static/js/main.7363747f.chunk.js"
+    "static/js/2.35ddcf5d.chunk.js",
+    "static/css/main.5335d63c.chunk.css",
+    "static/js/main.0183d030.chunk.js"
   ]
 }
