@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0c43a4947fcfbc78554445830236212f",
+    "revision": "ac9f383b15ac95567f94aa6847ac6709",
     "url": "/DrinkRecipes/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DrinkRecipes/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "3b82713af39e7d10614b",
+    "revision": "c333d9ccf1c5f46da31e",
     "url": "/DrinkRecipes/static/css/main.5335d63c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/DrinkRecipes/static/js/2.d660c386.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3b82713af39e7d10614b",
-    "url": "/DrinkRecipes/static/js/main.b2c108f0.chunk.js"
+    "revision": "c333d9ccf1c5f46da31e",
+    "url": "/DrinkRecipes/static/js/main.c306ff77.chunk.js"
   },
   {
     "revision": "ea8250ea8ae08bab7ae5",
